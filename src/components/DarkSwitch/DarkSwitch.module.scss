@@ -1,0 +1,121 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 169px;
+  height: 65px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #A2D1FD;
+  border-radius: 35px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+}
+
+.cloud-left {
+  left: 5%;
+  bottom: -45%;
+}
+
+.cloud-right {
+  right: -5%;
+  bottom: -40%;
+}
+
+.cloud-left,
+.cloud-right {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.switch input:checked ~ .slider .cloud-left {
+  transform: translateY(-15px) translateX(-105%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.switch input:checked ~ .slider .cloud-right {
+  transform: translateY(-15px) translateX(100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+
+.switch input:not(:checked) ~ .slider .cloud-left {
+  transform: translateY(0) translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.switch input:not(:checked) ~ .slider .cloud-right {
+  transform: translateY(0) translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.slider:before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  height: 55px;
+  width: 55px;
+  left: 5px;
+  top: 5px;
+  background: rgba(255, 193, 135, 0.96);
+  box-shadow: -3px 3px 3px rgba(183, 183, 183, 0.35), 0px 0px 5px rgba(255, 193, 135, 0.6), inset 0px -1.8px 3px #FFA149, inset 0px 1.8px 3px #FFD0A5;
+  border-radius: 50%;
+  transition: 0.6s;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.slider:after {
+  position: absolute;
+  content: "";
+  height: 44.64px;
+  width: 42.85px;
+  left: 10px;
+  top: 10px;
+  background: #66676A;
+  opacity: 0;
+  border-radius: 122px;
+  transform: matrix(-0.23, 0.97, 0.97, 0.23, 0, 0);
+  transition: opacity 0.6s ease;
+}
+
+input:checked + .slider {
+  background-color: #1F2533;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.2);
+  background-image: url('assets/stars.svg');
+  background-size: contain;
+  background-position: left center;
+}
+
+input:checked + .slider:before {
+  background-color: transparent;
+  background-image: url('assets/moon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateX(104px);
+  position: absolute;
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.7);
+}
+
+input:checked + .slider:after {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+

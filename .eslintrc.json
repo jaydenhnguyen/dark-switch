@@ -1,0 +1,140 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "formatjs",
+    "lodash"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "no-inner-declarations": "off",
+    "eqeqeq": "error",
+    "no-var": "error",
+    "no-await-in-loop": "error",
+    "no-console": "error",
+    "no-promise-executor-return": "error",
+    "no-template-curly-in-string": "error",
+    "no-useless-backreference": "error",
+    "require-atomic-updates": "error",
+    "no-alert": "error",
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-confusing-non-null-assertion": "error",
+    "@typescript-eslint/no-dynamic-delete": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-for-of": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
+    "@typescript-eslint/prefer-string-starts-ends-with": "error",
+    "@typescript-eslint/require-array-sort-compare": "error",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "@typescript-eslint/no-unsafe-return": "warn",
+    "@typescript-eslint/no-unsafe-call": "warn",
+    "@typescript-eslint/no-unsafe-member-access": "warn",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "react-hooks/exhaustive-deps": [
+      "error",
+      {
+        "additionalHooks": "(useEnhancedLayoutEffect)"
+      }
+    ],
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "formatjs/enforce-id": "error",
+    "formatjs/enforce-description": "off",
+    "formatjs/enforce-default-message": [
+      "error",
+      "literal"
+    ],
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    // this rule is conflicting with sonarqube
+    "@typescript-eslint/no-floating-promises": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "querystring",
+        "message": "Please use URLSearchParams instead"
+      }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "lodash/import-scope": [
+      2,
+      "method"
+    ]
+  },
+  "ignorePatterns": [
+    ".next",
+    "coverage",
+    "node_modules",
+    "next.config.js",
+    "jest.config.js",
+    "cypress/plugins/index.js",
+    "public/mockServiceWorker.js",
+    "babel.config.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "src/modules/e-finance/api/mock/server.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/src/**/*.test.[t]s?(x)"
+      ],
+      "env": {
+        "jest": true
+      },
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react"
+      ],
+      "settings": {
+        "testing-library/utils-module": "utils"
+      },
+      "rules": {
+        "@typescript-eslint/unbound-method": "off",
+        "jest/unbound-method": "error",
+        "jest/consistent-test-it": [
+          "error",
+          {
+            "fn": "test",
+            "withinDescribe": "test"
+          }
+        ],
+        "jest/no-alias-methods": "error"
+      }
+    },
+    {
+      "files": [
+        "**/cypress/**/*.[jt]s"
+      ],
+      "extends": [
+        "plugin:cypress/recommended"
+      ],
+      "parserOptions": {
+        "project": "cypress/tsconfig.json"
+      }
+    }
+  ]
+}
