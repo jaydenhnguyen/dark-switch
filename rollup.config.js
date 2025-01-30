@@ -4,7 +4,7 @@ const peerDepsExternal = require('rollup-plugin-peer-deps-external');
 const resolve = require('@rollup/plugin-node-resolve').default;
 const commonjs = require('@rollup/plugin-commonjs');
 const svg = require('rollup-plugin-svg');
-const url = require('@rollup/plugin-url');
+const external = require('rollup-plugin-peer-deps-external');
 
 module.exports = {
   input: 'src/index.ts',
@@ -15,7 +15,7 @@ module.exports = {
   },
   plugins: [
     peerDepsExternal(),
-    url(),
+    external(),
     resolve(),
     typescript(),
     commonjs(),

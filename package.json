@@ -1,6 +1,6 @@
 {
   "name": "dark-switch",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "description": "Dark switch button for changing light and dark mode for ReactJS applications",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -43,8 +43,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0",
+    "react": "^18",
+    "react-dom": "^18",
     "typescript": ">=3.7.0"
   }
 }

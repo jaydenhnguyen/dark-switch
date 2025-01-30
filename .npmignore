@@ -1,9 +1,22 @@
 # Exclude source files
 /src
+/build
 
 # Exclude local configuration
 /.babelrc
 /webpack.config.js
+/.editorconfig
+/.eslintrc.json
+/.gitignore
+/.prettierrc
+/.travis.yml
+/rollup.config.dev.js
+/rollup.config.js
+/yarn-error.log
+/.git
+/.idea
+/.vscode
+/*.log
 
 # Exclude node_modules
 /node_modules
@@ -21,3 +34,6 @@
 /npm-debug.log*
 /yarn-debug.log*
 /yarn-error.log*
+
+# Ignore postcss config only if styles are already bundled
+/postcss.config.js
