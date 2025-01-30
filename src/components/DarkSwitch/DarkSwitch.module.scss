@@ -1,3 +1,7 @@
+$light-bg: #A2D1FD;
+$dark-bg: #1F2533;
+$slider-size: 55px;
+
 .switch {
   position: relative;
   display: inline-block;
@@ -18,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #A2D1FD;
+  background-color: $light-bg;
   border-radius: 35px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -26,40 +30,40 @@
   overflow: hidden;
 }
 
-.cloud-left {
+.left-cloud {
   left: 5%;
   bottom: -45%;
 }
 
-.cloud-right {
+.right-cloud {
   right: -5%;
   bottom: -40%;
 }
 
-.cloud-left,
-.cloud-right {
+.left-cloud,
+.right-cloud {
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.switch input:checked ~ .slider .cloud-left {
+.switch input:checked ~ .slider .left-cloud {
   transform: translateY(-15px) translateX(-105%);
   transition: transform 0.6s ease-in-out;
 }
 
-.switch input:checked ~ .slider .cloud-right {
+.switch input:checked ~ .slider .right-cloud {
   transform: translateY(-15px) translateX(100%);
   transition: transform 0.6s ease-in-out;
 }
 
 
-.switch input:not(:checked) ~ .slider .cloud-left {
+.switch input:not(:checked) ~ .slider .left-cloud {
   transform: translateY(0) translateX(0);
   transition: transform 0.6s ease-in-out;
 }
 
-.switch input:not(:checked) ~ .slider .cloud-right {
+.switch input:not(:checked) ~ .slider .right-cloud {
   transform: translateY(0) translateX(0);
   transition: transform 0.6s ease-in-out;
 }
@@ -68,8 +72,8 @@
   position: absolute;
   z-index: 1;
   content: "";
-  height: 55px;
-  width: 55px;
+  height: $slider-size;
+  width: $slider-size;
   left: 5px;
   top: 5px;
   background: rgba(255, 193, 135, 0.96);
@@ -94,16 +98,16 @@
 }
 
 input:checked + .slider {
-  background-color: #1F2533;
+  background-color: $dark-bg;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.2);
-  background-image: url('assets/stars.svg');
+  background-image: url('./assets/stars.svg');
   background-size: contain;
   background-position: left center;
 }
 
 input:checked + .slider:before {
   background-color: transparent;
-  background-image: url('assets/moon.svg');
+  background-image: url('./assets/moon.svg');
   background-position: center;
   background-repeat: no-repeat;
   transform: translateX(104px);

@@ -1,10 +1,12 @@
-const postcss = require('rollup-plugin-postcss');
-const typescript = require('@rollup/plugin-typescript');
 const peerDepsExternal = require('rollup-plugin-peer-deps-external');
-const resolve = require('@rollup/plugin-node-resolve').default;
+const terser = require('@rollup/plugin-terser');
 const commonjs = require('@rollup/plugin-commonjs');
-const svg = require('rollup-plugin-svg');
-const external = require('rollup-plugin-peer-deps-external');
+const image = require('@rollup/plugin-image');
+const resolve = require('@rollup/plugin-node-resolve').default;
+const typescript = require('@rollup/plugin-typescript');
+const postcss = require('rollup-plugin-postcss');
+const postcssurl = require('postcss-url');
+const babel = require('@rollup/plugin-babel');
 
 module.exports = {
   input: 'src/index.ts',
@@ -15,13 +17,21 @@ module.exports = {
   },
   plugins: [
     peerDepsExternal(),
-    external(),
+    terser(),
+    commonjs(),
+    image(),
     resolve(),
     typescript(),
-    commonjs(),
-    svg(),
+    babel(),
     postcss({
       modules: true,
+      plugins: [
+        postcssurl({
+          url: 'inline',
+          maxSize: 10,
+          fallback: 'copy',
+        }),
+      ],
     }),
   ],
   external: ['react', 'react-dom'],
