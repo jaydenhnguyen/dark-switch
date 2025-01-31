@@ -1,6 +1,7 @@
 # DarkSwitch
 
-[![npm version](https://img.shields.io/npm/v/dark-switch.svg)](https://www.npmjs.com/package/dark-switch) [![npm downloads](https://img.shields.io/npm/dw/dark-switch.svg)](https://www.npmjs.com/package/dark-switch) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/react-dark-switch.svg?style=flat-square)](https://www.npmjs.com/package/react-dark-switch) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Current version: `1.0.6` 🚀
 
 ### The bring-me-the-designer switch that for toggling the light and dark mode.
@@ -39,13 +40,13 @@ new features, feel free to open an issue or submit a pull request. All contribut
 Install the package via npm:
 
 ```bash
-npm install dark-switch
+npm install react-dark-switch
 ```
 
 Or, if you're using yarn:
 
 ```bash
-yarn add dark-switch
+yarn add react-dark-switch
 ```
 
 ## How to make the magic happens
