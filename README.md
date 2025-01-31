@@ -33,7 +33,7 @@ new features, feel free to open an issue or submit a pull request. All contribut
 
 - Customizable size: `small`, `medium`, or `large`.
 - Simple integration with minimal setup.
-- Lightweight and easy to use cuz it purely CSS.
+- **Lightweight and easy to use cuz it purely CSS (no additional animation libraries needed)**
 
 ## Installation
 
