@@ -1,6 +1,6 @@
 # DarkSwitch
 
-[![npm version](https://img.shields.io/npm/v/react-dark-switch.svg?style=flat-square)](https://www.npmjs.com/package/react-dark-switch) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/dark-switch-react.svg?style=flat-square)](https://www.npmjs.com/package/dark-switch-react) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Current version: `1.0.6` 🚀
 
@@ -40,13 +40,13 @@ new features, feel free to open an issue or submit a pull request. All contribut
 Install the package via npm:
 
 ```bash
-npm install react-dark-switch
+npm install dark-switch-react
 ```
 
 Or, if you're using yarn:
 
 ```bash
-yarn add react-dark-switch
+yarn add dark-switch-react
 ```
 
 ## How to make the magic happens
