@@ -12,7 +12,7 @@ type DarkSwitchProps = {
 export function DarkSwitch({ onClick, size = 'medium', isDark = false }: DarkSwitchProps): React.JSX.Element {
   return (
     <label className={classes[`switch-${size}`]}>
-      <input type="checkbox" checked={isDark} onChange={onClick} className={classes['checkbox']} />
+      <input type="checkbox" checked={isDark} onChange={onClick} />
       <span className={classes['slider']}>
         <img className={classes['left-cloud']} src={LeftCloud} alt={'left-cloud'} />
         <img className={classes['right-cloud']} src={RightCloud} alt={'right-cloud'} />
