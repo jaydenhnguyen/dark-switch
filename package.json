@@ -1,16 +1,19 @@
 {
   "name": "dark-switch",
-  "version": "1.0.0-rc.1",
-  "description": "Dark switch button for changing light and dark mode for ReactJS applications",
+  "version": "1.0.7",
+  "author": "Jayden Huy Nguyen",
+  "description": "The bring-me-the-designer switch that for toggling the light and dark mode.",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.3",
     "tslib": "^2.6.2"
