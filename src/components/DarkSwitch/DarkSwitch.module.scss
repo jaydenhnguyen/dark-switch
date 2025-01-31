@@ -13,8 +13,6 @@ $switch-medium-height: 40px;
 $switch-small-width: 65px;
 $switch-small-height: 30px;
 
-
-// Mixin for common switch styles
 @mixin switch-base($width, $height, $cloudSize, $lCloudTrans) {
   position: relative;
   display: inline-block;
@@ -40,9 +38,14 @@ $switch-small-height: 30px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 
     img {
       width: $cloudSize;
+      pointer-events: none;
     }
   }
 
@@ -55,11 +58,16 @@ $switch-small-height: 30px;
     height: calc(#{$height} - #{$offset} * 2);
     width: calc(#{$height} - #{$offset} * 2);
     background: rgba(255, 193, 135, 0.96);
-    box-shadow: -3px 3px 3px rgba(183, 183, 183, 0.35), 0px 0px 5px rgba(255, 193, 135, 0.6), inset 0px -1.8px 3px #FFA149, inset 0px 1.8px 3px #FFD0A5;
+    box-shadow: -3px 3px 3px rgba(183, 183, 183, 0.35),
+    0px 0px 5px rgba(255, 193, 135, 0.6),
+    inset 0px -1.8px 3px #FFA149,
+    inset 0px 1.8px 3px #FFD0A5,
+    0px 0px 12px rgba(255, 193, 135, 0.5);
     border-radius: 50%;
     transition: 0.6s;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
   }
+
 
   .left-cloud,
   .right-cloud {
