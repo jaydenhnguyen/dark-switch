@@ -29,13 +29,13 @@ new features, feel free to open an issue or submit a pull request. All contribut
 
 ---
 
-## Features
+## 🗝 Features
 
 - Customizable size: `small`, `medium`, or `large`.
 - Simple integration with minimal setup.
 - **Lightweight and easy to use cuz it purely CSS (no additional animation libraries needed)**
 
-## Installation
+## 🚀 Installation
 
 Install the package via npm:
 
@@ -49,9 +49,7 @@ Or, if you're using yarn:
 yarn add dark-switch-react
 ```
 
-s
-
-## How to make the magic happens
+## 🪄 How to make the magic happens
 
 ```tsx
 import React, { useState } from 'react';
@@ -73,7 +71,7 @@ const App = () => {
 
 ```
 
-## Props
+## 📝 Props
 
 | Name        | Type                             | Description                                             | Default    |
 |-------------|----------------------------------|---------------------------------------------------------|------------|
@@ -82,7 +80,7 @@ const App = () => {
 | `className` | `string`                         | Custom className                                        | -          |
 | `onClick`   | `() => void`                     | Callback function triggered when the switch is toggled. | Required   |
 
-## Styling
+## 👁️ Styling
 
 The component uses scss for styling. You can customize the styles in your project by overriding the following classes:
 
