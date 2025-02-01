@@ -1,6 +1,6 @@
 {
   "name": "dark-switch-react",
-  "version": "1.0.3-rc.3",
+  "version": "1.0.4-rc.01",
   "author": "Jayden Huy Nguyen",
   "description": "The bring-me-the-designer switch that for toggling the light and dark mode.",
   "license": "MIT",
@@ -9,7 +9,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "cpublish": "npm run build && npm publish --access public"
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.3",
@@ -42,8 +43,8 @@
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "react": "^18",
-    "react-dom": "^18",
+    "react": ">=18",
+    "react-dom": ">=18",
     "typescript": ">=3.7.0"
   }
 }

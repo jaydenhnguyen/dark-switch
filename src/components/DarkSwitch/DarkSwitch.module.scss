@@ -82,8 +82,7 @@ $switch-small-height: 30px;
   input:checked + .slider {
     background-color: $dark-bg;
     border: $border-thickness solid #444;
-    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.7),
-    inset -2px -2px 6px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
 
     background-image: url('./assets/stars.svg');
     background-size: contain;
@@ -97,15 +96,11 @@ $switch-small-height: 30px;
     background-size: calc(#{$height} - #{$offset} * 2 - #{$border-thickness});
     background-repeat: no-repeat;
     transform: translateX(calc(#{$width} - #{$offset} * 2 - (#{$height} - #{$offset} * 2)));
-    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.8); // Stronger inner shadow for knob in checked state
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7), 0 0 15px rgba(0, 0, 0, 0.6);
   }
 
   input:checked + .slider:after {
     box-shadow: none;
-  }
-
-  input:focus + .slider {
-    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.7); // Enhanced inner shadow when focused
   }
 
   input:checked ~ .slider .left-cloud {
