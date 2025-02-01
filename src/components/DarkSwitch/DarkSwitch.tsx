@@ -34,7 +34,7 @@ type DarkSwitchProps = {
  * ```tsx
  * <DarkSwitch size="large" isDark={true} onClick={() => setToggleDarkMode(!isDark)} />
  * ```
- * @version: 1.0.6
+ * @version: 1.0.3-rc.1
  * @see: https://github.com/Jayjaynoplays/dark-switch
  *
  * @param onClick - Callback function triggered when the switch is toggled.
