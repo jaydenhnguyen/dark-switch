@@ -13,7 +13,7 @@ type DarkSwitchProps = {
    * Whether the switch is in "dark mode" or not.
    * @default false
    */
-  isInDark?: boolean;
+  isDark?: boolean;
 
   /**
    * Callback function triggered when the switch is toggled.
@@ -33,12 +33,12 @@ type DarkSwitchProps = {
  *
  * @param onClick - Callback function triggered when the switch is toggled.
  * @param size - The size of the switch. Default: `medium`
- * @param isInDark - Whether the switch is in "dark mode" or not. Default: `false`
+ * @param isDark - Whether the switch is in "dark mode" or not. Default: `false`
  * */
-export function DarkSwitch({ onClick, size = 'medium', isInDark = false }: DarkSwitchProps): React.JSX.Element {
+export function DarkSwitch({ onClick, size = 'medium', isDark = false }: DarkSwitchProps): React.JSX.Element {
   return (
     <label className={classes[`switch-${size}`]}>
-      <input type="checkbox" checked={isInDark} onChange={onClick} />
+      <input type="checkbox" checked={isDark} onChange={onClick} />
       <span className={classes['slider']}>
         <img className={classes['left-cloud']} src={LeftCloud} alt={'left-cloud'} />
         <img className={classes['right-cloud']} src={RightCloud} alt={'right-cloud'} />

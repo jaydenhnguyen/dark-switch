@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/dark-switch-react.svg?style=flat-square)](https://www.npmjs.com/package/dark-switch-react) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Current version: `1.0.6` 🚀
+Current version: `1.0.2-rc.1` 🚀
 
 ### The bring-me-the-designer switch that for toggling the light and dark mode.
 
@@ -49,6 +49,8 @@ Or, if you're using yarn:
 yarn add dark-switch-react
 ```
 
+s
+
 ## How to make the magic happens
 
 ```tsx
@@ -62,7 +64,7 @@ const App = () => {
     <div className={isDarkMode ? 'dark' : 'light'}>
       <DarkSwitch
         size="large"
-        isInDark={isDarkMode}
+        isDark={isDarkMode}
         onClick={() => setIsDarkMode(!isDarkMode)}
       />
     </div>
@@ -73,11 +75,11 @@ const App = () => {
 
 ## Props
 
-| Name       | Type                             | Description                                             | Default    |
-|------------|----------------------------------|---------------------------------------------------------|------------|
-| `size`     | `'small' \| 'medium' \| 'large'` | The size of the switch.                                 | `'medium'` |
-| `isInDark` | `boolean`                        | Whether the switch is in dark mode or not.              | `false`    |
-| `onClick`  | `() => void`                     | Callback function triggered when the switch is toggled. | Required   |
+| Name      | Type                             | Description                                             | Default    |
+|-----------|----------------------------------|---------------------------------------------------------|------------|
+| `size`    | `'small' \| 'medium' \| 'large'` | The size of the switch.                                 | `'medium'` |
+| `isDark`  | `boolean`                        | Whether the switch is in dark mode or not.              | `false`    |
+| `onClick` | `() => void`                     | Callback function triggered when the switch is toggled. | Required   |
 
 ## Styling
 
