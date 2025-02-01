@@ -2,6 +2,7 @@ import * as React from 'react';
 import LeftCloud from './assets/left_cloud.svg';
 import RightCloud from './assets/right_cloud.svg';
 import classes from './DarkSwitch.module.scss';
+import classNames from 'classnames';
 
 type DarkSwitchProps = {
   /**
@@ -19,6 +20,11 @@ type DarkSwitchProps = {
    * Callback function triggered when the switch is toggled.
    */
   onClick: () => void;
+
+  /**
+   * Custom classname
+   * */
+  className?: string;
 };
 
 /**
@@ -33,11 +39,17 @@ type DarkSwitchProps = {
  *
  * @param onClick - Callback function triggered when the switch is toggled.
  * @param size - The size of the switch. Default: `medium`
+ * @param className - custom className
  * @param isDark - Whether the switch is in "dark mode" or not. Default: `false`
  * */
-export function DarkSwitch({ onClick, size = 'medium', isDark = false }: DarkSwitchProps): React.JSX.Element {
+export function DarkSwitch({
+  onClick,
+  size = 'medium',
+  className,
+  isDark = false,
+}: DarkSwitchProps): React.JSX.Element {
   return (
-    <label className={classes[`switch-${size}`]}>
+    <label className={classNames(classes[`switch-${size}`], className)}>
       <input type="checkbox" checked={isDark} onChange={onClick} />
       <span className={classes['slider']}>
         <img className={classes['left-cloud']} src={LeftCloud} alt={'left-cloud'} />

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.3",
+    "classnames": "^2.5.1",
     "tslib": "^2.6.2"
   },
   "devDependencies": {

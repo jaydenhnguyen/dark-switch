@@ -75,11 +75,12 @@ const App = () => {
 
 ## Props
 
-| Name      | Type                             | Description                                             | Default    |
-|-----------|----------------------------------|---------------------------------------------------------|------------|
-| `size`    | `'small' \| 'medium' \| 'large'` | The size of the switch.                                 | `'medium'` |
-| `isDark`  | `boolean`                        | Whether the switch is in dark mode or not.              | `false`    |
-| `onClick` | `() => void`                     | Callback function triggered when the switch is toggled. | Required   |
+| Name        | Type                             | Description                                             | Default    |
+|-------------|----------------------------------|---------------------------------------------------------|------------|
+| `size`      | `'small' \| 'medium' \| 'large'` | The size of the switch.                                 | `'medium'` |
+| `isDark`    | `boolean`                        | Whether the switch is in dark mode or not.              | `false`    |
+| `className` | `string`                         | Custom className                                        | -          |
+| `onClick`   | `() => void`                     | Callback function triggered when the switch is toggled. | Required   |
 
 ## Styling
 
