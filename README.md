@@ -1,7 +1,8 @@
 # DarkSwitch
 
-[![npm version](https://img.shields.io/npm/v/dark-switch-react.svg?style=flat-square)](https://www.npmjs.com/package/dark-switch-react) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+![React](https://img.shields.io/badge/React-v18.2.0-61DAFB?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.3-blue?logo=typescript&logoColor=blue)
+![Gzipped Size](https://img.shields.io/badge/Gzipped%20Size-4.6%20KB-red)
 Current version: `1.0.2-rc.1` 🚀
 
 ### The bring-me-the-designer switch that for toggling the light and dark mode.

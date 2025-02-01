@@ -7,6 +7,7 @@ const typescript = require('@rollup/plugin-typescript');
 const postcss = require('rollup-plugin-postcss');
 const postcssurl = require('postcss-url');
 const babel = require('@rollup/plugin-babel');
+const filesize = require('rollup-plugin-filesize');
 
 module.exports = {
   input: 'src/index.ts',
@@ -23,6 +24,7 @@ module.exports = {
     resolve(),
     typescript(),
     babel(),
+    filesize(),
     postcss({
       modules: true,
       plugins: [
