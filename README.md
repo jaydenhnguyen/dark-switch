@@ -2,9 +2,9 @@
 
 ![React](https://img.shields.io/badge/React-v18.2.0-61DAFB?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.3-blue?logo=typescript&logoColor=blue)
-![Gzipped Size](https://img.shields.io/badge/Gzipped%20Size-4.62%20KB-red)
+![Gzipped Size](https://img.shields.io/badge/Gzipped%20Size-4.69%20KB-red)
 
-Current version: `1.0.4-rc.01` 🚀
+Current version: `1.0.4-rc.03` 🚀
 
 ### The bring-me-the-designer switch for toggling the light and dark mode
 

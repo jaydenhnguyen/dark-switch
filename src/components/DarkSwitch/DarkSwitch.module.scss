@@ -13,6 +13,16 @@ $switch-medium-height: 40px;
 $switch-small-width: 71px;
 $switch-small-height: 30px;
 
+.no-highlights {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
 @mixin switch-base($width, $height, $cloudSize, $lCloudTrans) {
   position: relative;
   display: inline-block;
@@ -42,10 +52,6 @@ $switch-small-height: 30px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     filter: none;
     overflow: hidden;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 
     img {
       width: $cloudSize;
@@ -96,7 +102,7 @@ $switch-small-height: 30px;
     background-size: calc(#{$height} - #{$offset} * 2 - #{$border-thickness});
     background-repeat: no-repeat;
     transform: translateX(calc(#{$width} - #{$offset} * 2 - (#{$height} - #{$offset} * 2)));
-    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7), 0 0 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 15px rgba(0, 0, 0, 0.6);
   }
 
   input:checked + .slider:after {
@@ -132,6 +138,10 @@ $switch-small-height: 30px;
   .right-cloud {
     right: -20%;
     bottom: -75%;
+  }
+
+  input:focus {
+    outline: none;
   }
 }
 
